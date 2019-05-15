@@ -16,6 +16,8 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
+  inputs:
+    versionSpec: '4.4.0'
 
 - task: DotNetCoreInstaller@0
   inputs:
