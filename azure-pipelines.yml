@@ -1,25 +1,43 @@
 pool: Hosted Windows 2019 with VS2019
+name: 1.0.0$(Rev:.r)
 
 steps:
 
 - checkout: self
-  clean: true
 
-- task: MSBuild@1
-  displayName: Restore
+- task: DotNetCoreCLI@2
+  name: 'Build'
   inputs:
-    solution: FastRunner.sln
-    msbuildArguments: /t:Restore /p:Configuration=Release /m
+    command: 'build'
+    arguments: '-c Release'
+    configuration: 'Release'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
 
-- task: MSBuild@1
-  displayName: Build
+- task: DotNetCoreCLI@2
+  name: 'Tests'
   inputs:
-    solution: FastRunner.sln
-    msbuildArguments: /p:PackOnBuild=true /p:Configuration=Release
+    command: 'test'
+    arguments: '-c Release'
+    configuration: 'Release'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
 
-- task: VSTest@2
-  displayName: Test
+- task: DotNetCoreCLI@2
+  name: 'Pack'
   inputs:
-    testAssemblyVer2: FastRunner.Tests\bin\*\*\*.Tests.dll
-    diagnosticsEnabled: false
-    rerunFailedTests: false
+    command: 'pack'
+    feedsToUse: 'select'
+    packagesToPack: '**/*.csproj'
+    configuration: 'Release'
+    versioningScheme: 'byBuildNumber'
+
+- task: DotNetCoreCLI@2
+  name: 'Push'
+  inputs:
+    command: 'push'
+    feedsToUse: 'select'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'Packages'
+    versioningScheme: 'off'
