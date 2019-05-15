@@ -1,5 +1,6 @@
 ﻿using FastRunner;
 using FastRunner.Autofac;
+using System.Reflection;
 
 namespace Autofac
 {
@@ -17,6 +18,15 @@ namespace Autofac
 
             // Resolve JobStartup so that it lives along with the container.
             builder.RegisterBuildCallback(c => c.Resolve<JobStartup>());
+        }
+
+        public static void RegisterFastJobs(this ContainerBuilder builder, params Assembly[] assemblies)
+        {
+            builder.RegisterAssemblyTypes(assemblies)
+                .Where(t => t.IsAssignableTo<IFastJob>())
+                .AsSelf()
+                .As<IFastJob>()
+                .SingleInstance();
         }
     }
 }
