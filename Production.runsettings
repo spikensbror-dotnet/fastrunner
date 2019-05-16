@@ -8,6 +8,7 @@
             <ModulePaths>
               <Include>
                 <ModulePath>.*FastRunner\.dll</ModulePath>
+                <ModulePath>.*FastRunner\.Autofac\.dll</ModulePath>
                 <ModulePath>.*FastRunner\.Tests\.dll</ModulePath>
               </Include>
             </ModulePaths>
