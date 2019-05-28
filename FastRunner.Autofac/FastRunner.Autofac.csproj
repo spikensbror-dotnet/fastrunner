@@ -1,7 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Kimmy Andersson</Authors>
+    <Description>Autofac activation, discovery and lifetime management for FastRunner.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/spikensbror-dotnet/fastrunner</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
