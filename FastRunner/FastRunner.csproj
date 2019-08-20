@@ -1,11 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Kimmy Andersson</Authors>
-    <PackageProjectUrl>https://github.com/spikensbror-dotnet/fastrunner</PackageProjectUrl>
     <Description>FastRunner is an open-source, lightweight background job engine for fast-executing background jobs scheduled using TimeSpan intervals.</Description>
+    <PackageProjectUrl>https://github.com/spikensbror-dotnet/fastrunner</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/spikensbror-dotnet/fastrunner</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
 </Project>

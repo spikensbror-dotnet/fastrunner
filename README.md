@@ -10,3 +10,17 @@ FastRunner is an open-source, lightweight background job engine for fast-executi
 ## FastRunner.Autofac
 
 [![NuGet FastRunner.Autofac](https://img.shields.io/nuget/v/FastRunner.Autofac.svg)](https://www.nuget.org/packages/FastRunner.Autofac/)
+
+## Examples
+
+### Basic usage
+
+See [BasicUsageProgram.cs](FastRunner.ExampleApp/BasicUsageProgram.cs).
+
+### Autofac
+
+See [AutofacProgram.cs](FastRunner.ExampleApp/AutofacProgram.cs).
+
+### Custom activator
+
+See [CustomActivatorProgram](FastRunner.ExampleApp/CustomActivatorProgram.cs).

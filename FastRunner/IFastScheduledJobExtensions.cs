@@ -2,7 +2,7 @@
 
 namespace FastRunner
 {
-    public static class IFastScheduledJobExtensions
+    static class IFastScheduledJobExtensions
     {
         public static bool ShouldRun(this IFastScheduledJob job, DateTimeOffset utcNow)
         {

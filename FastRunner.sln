@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastRunner.ExampleApp", "Fa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastRunner.Autofac", "FastRunner.Autofac\FastRunner.Autofac.csproj", "{6BF41C7E-8A36-4585-A05E-4B4862E94072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastRunner.Tests", "FastRunner.Tests\FastRunner.Tests.csproj", "{679CEFB8-3F96-4CCD-900F-5575319FD7CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastRunner.Tests", "FastRunner.Tests\FastRunner.Tests.csproj", "{679CEFB8-3F96-4CCD-900F-5575319FD7CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35167FEA-4FA3-4AA2-A45D-2B0A1F3B278F}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+		LICENSE = LICENSE
+		Production.runsettings = Production.runsettings
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
