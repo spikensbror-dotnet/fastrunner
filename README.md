@@ -23,4 +23,4 @@ See [AutofacProgram.cs](FastRunner.ExampleApp/AutofacProgram.cs).
 
 ### Custom activator
 
-See [CustomActivatorProgram](FastRunner.ExampleApp/CustomActivatorProgram.cs).
+See [CustomActivatorProgram.cs](FastRunner.ExampleApp/CustomActivatorProgram.cs).
